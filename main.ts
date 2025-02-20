@@ -130,7 +130,7 @@ function carProb () {
         addPetHealth(randint(20, 30))
     } else {
         game.showLongText("Incorrect! The surgery was paid for, but you couldn't afford the pain medication afterwards since Accident doesn't cover ailments you pet lost some health!", DialogLayout.Bottom)
-        money = Math.min(0, money - randint(200, 350))
+        money = Math.max(0, money - randint(200, 350))
         game.showLongText("-" + ("" + money) + " money", DialogLayout.Bottom)
         takeHealth(randint(20, 30))
     }
